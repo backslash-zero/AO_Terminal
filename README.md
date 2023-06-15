@@ -1,11 +1,12 @@
 # What is it?
 Server.py runs a TCP server to send the _Answer_ to the _Question_.
-
+!['screenshot of the terminal'](/files/img/screenshot.png)
 
 # How to use
 ```
 python server.py --port 7653
 ```
+
 you can enter `exit` to quit the server
 
 ## Flags
