@@ -10,7 +10,7 @@ parser.add_argument('--prefix', type=str, dest='prefix', default='➜ ')
 
 args = parser.parse_args()
 
-HOST = 'localhost'  # Set to the IP address of the machine running TouchDesigner
+HOST = args.host  # Set to the IP address of the machine running TouchDesigner
 PORT = args.port  # Use the same port number as the TouchDesigner TCP/IP DAT
 DEBUG = args.debug
 PREFIX = args.prefix
@@ -38,8 +38,11 @@ if (DEBUG):
 # Receive messages from the client
 while True:
     if (DEBUG):
-        client_socket.sendall('This is the server\n'.encode())
+        print('before input')
     data = input(styledPrefix)
+    if (DEBUG):
+        print('Waiting')
+        client_socket.sendall('This is the server\n'.encode())
     if data == "exit":
         break
     if (DEBUG):
