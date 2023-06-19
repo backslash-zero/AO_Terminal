@@ -27,7 +27,7 @@ By default:
 - `--port-py` port is `7654`
 
 ```
-python server_double.py --port-td 7653 --port-py 7654
+python server_double.py --host 192.168.1.69 --port-td 7653 --port-py 7654
 ```
 
 parser.add_argument('--port-td', type=int, dest='porttd', default='7654')
